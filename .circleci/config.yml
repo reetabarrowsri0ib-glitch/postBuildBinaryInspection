@@ -1,0 +1,18 @@
+version: 2.1
+jobs:
+  loop_sum:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - run:
+          name: for loop
+          command: |
+            total=0
+            for i in 1 2 3 4 5; do
+              total=$((total + i))
+            done
+            echo "sum=$total"
+workflows:
+  main:
+    jobs:
+      - loop_sum
