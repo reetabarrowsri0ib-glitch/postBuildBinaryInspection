@@ -1,0 +1,2 @@
+# postBuildBinaryInspection
+Notify support team
